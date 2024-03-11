@@ -1,0 +1,58 @@
+/* .rectangle {
+    width: 100%;
+    position: relative;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0; 
+  }
+  .rectangle::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    transform: rotate(180deg);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    background-color: red;
+    
+    z-index: 1; 
+  }
+  .rectangle p {
+    position: relative;
+    z-index: 2; 
+    color: white; 
+    font-size: 18px; 
+    text-align: center;
+  } */
+
+  .rectangle {
+    width: auto;
+    
+    position: relative;
+    background-color: #1b3e53;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0; /* Ensure the rectangle is below the pentagon */
+    flex-direction: column;
+     white-space: normal;
+     text-overflow: ellipsis;
+  }
+  .rectangle::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    transform: rotate(180deg);
+    clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0% 100%, 0% 38%);
+    background-color: #2d5c7a;
+    /* Adjust positioning to align with rectangle */
+    z-index: 1; /* Ensure the pentagon stays above the rectangle */
+  }
+ 
+  .rectangle * {
+    position: relative;
+    z-index: 2; /* Ensure the text stays above the pentagon */
+    color: white; /* Set text color to white */
+  }
