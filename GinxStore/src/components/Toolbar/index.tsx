@@ -8,7 +8,9 @@ import  { ReactComponent as Cart } from "../../assets/images/cart.svg"
 import { ReactComponent as Hamburger } from "../../assets/images/Hamburger.svg"
 import { ReactComponent as Cancel } from "../../assets/images/cancel.svg"
 import { ReactComponent as MobileLogo } from "../../assets/images/mobileLogo.svg"
+import Products from '../../views/Products';
 import { useState } from 'react';
+
 // import { motion } from '@tailwindcss/motion'
 
 
@@ -20,14 +22,13 @@ interface ToolBarProps {
 const ToolBar: React.FC<ToolBarProps> = () => {
 const location =  useLocation();
 const pathname = location.pathname;
-// console.log(pathname)
 
 const [isOpen, setIsOpen] = useState(false);
 const toggleMenu = () => setIsOpen(!isOpen);
   
 
   return (
-    <nav className="bg-primary text-white flex items-center justify-between md:gap-2 font-Inter mt-7 h-20 relative z-10  ">
+    <nav className="bg-primary text-white flex items-center justify-between md:gap-2 font-Inter h-20 top-7 left-0 w-full z-50 fixed ">
       
           <div className="flex justify-center items-center  gap-8 " id='main-div'>
             <div className='flex items-center pl-16'>

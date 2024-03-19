@@ -11,8 +11,7 @@ import SearchBar from '../../../components/SearchBar'
   const Shop = () => console.log("shop");
 
   return (
-    <div className={`${styles.background} mx-auto overflow-y-auto`}>
-      <ToolBar/>
+    <div className={`${styles.background} mx-auto overflow-y-auto relative z-10 `}>
       <div className='text-white pl-0 md:px-8    pt-36'> 
         <div>
           <p className=' text-6xl font-bold'>The new ecommerce global <br/>platform.</p>
